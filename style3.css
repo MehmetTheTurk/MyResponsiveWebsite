@@ -1,0 +1,158 @@
+body{
+  font-family: "montserrat",sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+nav{
+  height: 80px;
+  background: #34495e;
+  padding: 0 20px;
+  color: #fff;
+}
+/* nav h2{
+  line-height: 82px;
+  float: left;
+  text-transform: uppercase;
+  margin-left: 30px;
+} */
+nav ul{
+  float: right;
+  margin-right: 25px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+nav ul li a{
+  position: relative;
+  color: white;
+  font-size: 18px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+nav ul li a::before{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+label #btn,
+label #cancel{
+  color: white;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 944px) {
+  nav ul li a {
+    font-size: 17px;
+  }
+}
+@media (max-width: 860px) {
+  label #btn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #34495e;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  #check:checked ~ label #btn{
+    display: none;
+  }
+  #check:checked ~ label #cancel{
+    display: block;
+  }
+}
+
+.contact-section{
+	background-size:auto;
+	padding: 40px 0;
+  }
+  .contact-section h1{
+	text-align: center;
+	color: rgb(255, 255, 255);
+  }
+  .border{
+	width: 100px;
+	height: 10px;
+	background: #34495e;
+	margin: 40px auto;
+  }
+
+  .contact-form{
+	max-width: 600px;
+	margin: auto;
+	padding: 0 10px;
+	overflow: hidden;
+  }
+
+  .contact-form-text{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 16px 0;
+	border: 0;
+	background: #111;
+	padding: 20px 40px;
+	outline: none;
+	color: #ddd;
+	transition: 0.5s;
+  }
+  .contact-form-text:focus{
+	box-shadow: 0 0 10px 4px #34495e;
+  }
+  textarea.contact-form-text{
+	resize: none;
+	height: 120px;
+  }
+  .contact-form-btn{
+	float: right;
+	border: 0;
+	background: #34495e;
+	color: #fff;
+	padding: 12px 50px;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.5s;
+  }
+  .contact-form-btn:hover{
+	background: #2980b9;
+  }
